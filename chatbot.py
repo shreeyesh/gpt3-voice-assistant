@@ -1,7 +1,8 @@
 import openai
+from dotenv import dotenv_values
 
 # Set up OpenAI API key
-openai.api_key = "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"
+openai.api_key = dotenv_values(".env.api_key") 
 
 # Define a function to generate a response
 def generate_response(prompt):
